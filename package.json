@@ -1,0 +1,30 @@
+{
+  "name": "vagrant-escluster",
+  "version": "1.0.0",
+  "description": "How To Set Up a Production Elasticsearch Cluster on CentOS 7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrodriguezjr/vagrant-escluster.git"
+  },
+  "keywords": [
+    "elasticsearch"
+  ],
+  "author": "Joe Rodriguez Jr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrodriguezjr/vagrant-escluster/issues"
+  },
+  "homepage": "https://github.com/jrodriguezjr/vagrant-escluster#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.1.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
