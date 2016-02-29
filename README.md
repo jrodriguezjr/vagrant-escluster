@@ -1,7 +1,7 @@
 # vagrant-escluster
 
 ## Intro
-Elasticsearch is a popular open source search server that is used for real-time distributed search and analysis of data. When used for anything other than development, Elasticsearch should be deployed across multiple servers as a cluster, for the best performance, stability, and scalability.
+Elasticsearch is a popular open source search server that is used for real-time distributed search and analysis of data. 
 
 This repo will show you how to install and configure a production Elasticsearch cluster on CentOS 7.
 
