@@ -68,7 +68,7 @@ enabled=1
     sudo sed -i 's/# cluster.name: my-application/cluster.name: production/' /etc/elasticsearch/elasticsearch.yml
     sudo sed -i 's/# node.name: node-1/node.name: \$\{HOSTNAME\}/' /etc/elasticsearch/elasticsearch.yml
     sudo sed -i 's/# network.host: 192.168.0.1/network.host: \[_enp0s8_, _local_\]/' /etc/elasticsearch/elasticsearch.yml
-    sudo sed -i "s/# discovery.zen.ping.unicast.hosts: \[\"host1\", \"host2\"\]/discovery.zen.ping.unicast.hosts: \[\"master\", \"data1\", \"data2\"\]/" /etc/elasticsearch/elasticsearch.yml
+    sudo sed -i 's/^# discovery.zen.ping.unicast.hosts:.*/discovery.zen.ping.unicast.hosts: \["master", "data1", "data2"\]/g' /etc/elasticsearch/elasticsearch.yml
 
     sudo systemctl start elasticsearch
     sudo systemctl enable elasticsearch
@@ -124,7 +124,7 @@ enabled=1
       sudo sed -i 's/# cluster.name: my-application/cluster.name: production/' /etc/elasticsearch/elasticsearch.yml
       sudo sed -i 's/# node.name: node-1/node.name: \$\{HOSTNAME\}/' /etc/elasticsearch/elasticsearch.yml
       sudo sed -i 's/# network.host: 192.168.0.1/network.host: \[_enp0s8_, _local_\]/' /etc/elasticsearch/elasticsearch.yml
-      sudo sed -i "s/# discovery.zen.ping.unicast.hosts: \[\"host1\", \"host2\"\]/discovery.zen.ping.unicast.hosts: \[\"master\", \"data1\", \"data2\"\]/" /etc/elasticsearch/elasticsearch.yml
+      sudo sed -i 's/^# discovery.zen.ping.unicast.hosts:.*/discovery.zen.ping.unicast.hosts: \["master", "data1", "data2"\]/g' /etc/elasticsearch/elasticsearch.yml
 
       sudo systemctl start elasticsearch
       sudo systemctl enable elasticsearch
@@ -178,7 +178,8 @@ enabled=1
       sudo sed -i 's/# cluster.name: my-application/cluster.name: production/' /etc/elasticsearch/elasticsearch.yml
       sudo sed -i 's/# node.name: node-1/node.name: \$\{HOSTNAME\}/' /etc/elasticsearch/elasticsearch.yml
       sudo sed -i 's/# network.host: 192.168.0.1/network.host: \[_enp0s8_, _local_\]/' /etc/elasticsearch/elasticsearch.yml
-      sudo sed -i "s/# discovery.zen.ping.unicast.hosts: \[\"host1\", \"host2\"\]/discovery.zen.ping.unicast.hosts: \[\"master\", \"data1\", \"data2\"\]/" /etc/elasticsearch/elasticsearch.yml
+      sudo sed -i 's/^# discovery.zen.ping.unicast.hosts:.*/discovery.zen.ping.unicast.hosts: \["master", "data1", "data2"\]/g' /etc/elasticsearch/elasticsearch.yml
+
       sudo systemctl start elasticsearch
       sudo systemctl enable elasticsearch
     SHELL
